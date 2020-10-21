@@ -6,12 +6,12 @@
     <p>Your username and password did not match. Please try again.</p>
 {% endif %}
 
-<form method='post' action="{% url 'users:login' %}">
+<form method="post" action="{% url 'users:login' %}">
     {% csrf_token %}
     {{ form.as_p }}
 
     <button name='submit'>Log in</button>
-    <input type='hidden' name='text'
+    <input type='hidden' name='next'
         value="{% url 'learning_logs:index' %}" />
 </form>
 

@@ -43,7 +43,7 @@ def new_topic(request):
             new_topic = form.save(commit=False)
             new_topic.owner = request.user
             new_topic.save()
-            return redirect('learning_logs/topics')
+            return redirect('learning_logs:topics')
     
     # Display a blank or invaild form. 
     context = {'form': form}

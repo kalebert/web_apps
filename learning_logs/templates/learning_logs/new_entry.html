@@ -2,7 +2,7 @@
 {% load bootstrap4 %}
 
 {% block page_header %}
-  <h3>Edit Entry</h3>
+  <h3>New Entry</h3>
 {% endblock page_header %}
 
 
@@ -12,10 +12,10 @@
 
 <form class="form" action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
-    {{ bootstrap_form form }}
-    {{ button }}
+    {% bootstrap_form form %}
+    {% button %}
     <button class="btn btn-primary" name='submit'>Add entry</button>
-    {{ endbuttons }}
+    {% endbuttons %}
 </form>
 
 {% endblock content %}

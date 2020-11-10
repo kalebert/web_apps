@@ -131,6 +131,7 @@ STATIC_URL = '/static/'
 
 # My settings
 LOGIN_URL = 'users:login'
+LOGIN_REDIRECT_URL = 'learning_logs:topics'
 
 # Heroku Settings
 import django_heroku

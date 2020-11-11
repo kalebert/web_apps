@@ -13,7 +13,7 @@
 <form class="form" action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
-    {% button %}
+    {% buttons %}
     <button class="btn btn-primary" name='submit'>Add entry</button>
     {% endbuttons %}
 </form>
